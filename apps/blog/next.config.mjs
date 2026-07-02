@@ -231,6 +231,16 @@ const config = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/the-database-should-not-become-the-product",
+        destination: "/how-xeito-builds-features-not-database-infrastructure-with-prisma",
+        permanent: true,
+      },
+      {
+        source: "/xeito-prisma-customer-story",
+        destination: "/how-xeito-builds-features-not-database-infrastructure-with-prisma",
+        permanent: true,
+      },
       ...tagSlugs.map((tag) => ({
         source: `/${tag}`,
         destination: `/?tag=${tag}`,
