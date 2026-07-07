@@ -5,6 +5,9 @@
   "pages": [
     "---Introduction---",
     "index",
+    "---Data Modeling---",
+    "...data-modeling",
+
     "---Fundamentals---",
     "...fundamentals",
 

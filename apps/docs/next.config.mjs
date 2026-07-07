@@ -319,6 +319,11 @@ const config = {
       // SEO owner at cutover): /orm/prisma-client/queries/full-text-search,
       // /orm/prisma-client/queries/advanced/query-optimization-performance,
       // /orm/prisma-client/queries/excluding-fields.
+      //
+      // DR-8679 Data modeling:
+      // { source: "/orm/prisma-schema", destination: "/orm/next/data-modeling", permanent: false },
+      // { source: "/orm/prisma-schema/data-model/models", destination: "/orm/next/data-modeling", permanent: false },
+      // { source: "/orm/prisma-schema/data-model/relations", destination: "/orm/next/data-modeling/relational-databases", permanent: false },
       // ───────────────────────────────────────────────────────────────────────
     ];
   },
