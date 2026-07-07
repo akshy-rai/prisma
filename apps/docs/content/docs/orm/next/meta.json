@@ -6,6 +6,12 @@
     "---Introduction---",
     "index",
     "---Fundamentals---",
-    "...fundamentals"
+    "...fundamentals",
+
+    "---Middleware---",
+    "...middleware",
+
+    "---Extensions---",
+    "...extensions"
   ]
 }
