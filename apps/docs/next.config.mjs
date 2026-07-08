@@ -331,6 +331,21 @@ const config = {
       // { source: "/orm/prisma-schema", destination: "/orm/next/data-modeling", permanent: false },
       // { source: "/orm/prisma-schema/data-model/models", destination: "/orm/next/data-modeling", permanent: false },
       // { source: "/orm/prisma-schema/data-model/relations", destination: "/orm/next/data-modeling/relational-databases", permanent: false },
+      //
+      // Migrations (PR #8025; the "Migrating from Prisma 7" guide is DR-8689):
+      // { source: "/orm/prisma-migrate", destination: "/orm/next/migrations/how-migrations-work", permanent: false },
+      // { source: "/orm/prisma-migrate/getting-started", destination: "/orm/next/migrations/how-migrations-work", permanent: false },
+      // { source: "/orm/prisma-migrate/understanding-prisma-migrate/mental-model", destination: "/orm/next/migrations/the-migration-graph", permanent: false },
+      // { source: "/orm/prisma-migrate/workflows/development-and-production", destination: "/orm/next/migrations/applying-a-migration", permanent: false },
+      // { source: "/orm/prisma-migrate/workflows/customizing-migrations", destination: "/orm/next/migrations/editing-a-migration", permanent: false },
+      //
+      // No Prisma Next equivalent yet (stay on the Prisma 7 tree, flag to the
+      // SEO owner at cutover): /orm/prisma-migrate/understanding-prisma-migrate/shadow-database,
+      // .../migration-histories, .../limitations-and-known-issues, and the
+      // /orm/prisma-migrate/workflows/ pages for seeding, baselining,
+      // squashing-migrations, generating-down-migrations, patching-and-hotfixing,
+      // native-database-functions, native-database-types, prototyping-your-schema,
+      // troubleshooting — reassess as matching Prisma Next pages land.
       // ───────────────────────────────────────────────────────────────────────
     ];
   },
