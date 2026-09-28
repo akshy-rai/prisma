@@ -182,12 +182,12 @@ npx prisma db init
 ✔ Applied 5 operation(s) across 1 contract space
 
 App space
-├─ Create table "post"
-├─ Create table "user"
-├─ Add unique constraint on "user" (email)
-├─ Create index "post_authorId_idx_e47547ed" on "post"
-├─ Add foreign key "post_authorId_fkey" on "post"
-└─ marker 1e8412e162dbbe69f4bb3bf8d07f0280ae67eaab15c34dcf201e67468315428d
+├─ Create table "Post"
+├─ Create table "User"
+├─ Add unique constraint on "User" (email)
+├─ Create index "Post_authorId_idx_e47547ed" on "Post"
+├─ Add foreign key "Post_authorId_fkey" on "Post"
+└─ marker 91e7f9f035806fa2789a4d726ef7724cad434fd6b00014d47ebf12d6e6bb784e
 ```
 
 `db init` replaces `prisma migrate dev` from Prisma ORM 7 for the first apply: it creates what is missing and records the contract hash in the database. Later schema changes go through [`db update`](/cli/db-update) for a direct development update or [`migration plan`](/cli/migration-plan) for a checked-in migration. To confirm the database matches the contract at any time, run `npx prisma db verify`.
@@ -267,7 +267,7 @@ npm run dev
 ```
 
 ```text no-copy
-  VITE v8.3.0  ready in 5509 ms
+  VITE v8.3.1  ready in 5509 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: use --host to expose
@@ -391,10 +391,18 @@ npx prisma@latest init
 ```text no-copy
 ✔ Added "postinstall": "prisma skills sync || exit 0" to package.json.
 ⚠ prisma.config.ts already exists; left untouched.
-✔ Synced 2 skills.
+✔ Synced 3 skills.
 
-Skill            Package               Installed into
-prisma-8         @prisma/orm-postgres  .claude/skills, .cursor/skills, .agents/skills, .devin/skills
+project:  ~/my-solid-prisma-app
+check:    enabled
+
+Skill                          Package               Version      Installed into
+prisma-8                       @prisma/orm-postgres  8.0.0-rc.12  .claude/skills, .cursor/skills, .agents/skills, .devin/skills
+prisma-composer-core-concepts  @prisma/composer      0.23.0       .claude/skills, .cursor/skills, .agents/skills, .devin/skills
+prisma-platform-core-concepts  prisma                8.0.0-rc.17  .claude/skills, .cursor/skills, .agents/skills, .devin/skills
+
+⚠ [INIT.CONFIG_KEPT] prisma.config.ts already exists, so init left it alone instead of writing the skills section.
+→ Add skills: { agents: ["claude", "cursor", "agents", "devin"] } to the object passed to definePrismaConfig in prisma.config.ts.
 ```
 
 Prompts that map to this guide:
